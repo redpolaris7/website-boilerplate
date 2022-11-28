@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Dosis', sans-serif;
+}
+
+.outer-grid {
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 70px 1fr;
+    grid-template-columns: 90px 1fr;
+    grid-template-areas: 
+    'alias-header alias-header '
+    'alias-inner-grid alias-inner-grid';
+}
+
+.outer-grid-expanded {
+    grid-template-areas: 
+    'alias-header alias-header '
+    'alias-nav alias-inner-grid';
+}
+
+.hide-nav {
+    display: none;
+}
+.inner-grid {
+    background-color: rgba(0, 31, 255, 0.2);
+    grid-area: alias-inner-grid;
+}
+header {
+    background-color: rgba(0, 31, 255, 0.5);
+    grid-area: alias-header;
+}
+nav {
+    background-color: rgba(0, 31, 255, 0.8);
+    grid-area: alias-nav;
+    /* display: none; */
+    width: 50px;
+    height: 50px;
+}
+
